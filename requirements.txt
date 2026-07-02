@@ -1,0 +1,16 @@
+albumentations
+matplotlib
+numpy
+opencv-python
+pandas
+Pillow
+pyyaml
+scikit-image
+scikit-learn
+segmentation-models-pytorch
+streamlit
+timm
+torch
+torchvision
+tqdm
+transformers

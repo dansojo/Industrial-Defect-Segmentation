@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local config
+configs/paths.local.yaml
+*.local.yaml
+.env
+
+# Data and model artifacts
+data/raw/
+data/external/
+data/processed/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Large generated outputs
+results/checkpoints/
+results/predictions/
+results/overlays/
+results/figures/full/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

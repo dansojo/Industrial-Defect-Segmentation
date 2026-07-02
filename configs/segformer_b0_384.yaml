@@ -1,0 +1,9 @@
+experiment:
+  name: segformer_b0_384
+  model: segformer_b0
+  loss: bce_dice
+  input_size: 384
+  threshold: val_best
+  batch_size: 8
+  epochs: 50
+  profile: colab_a100

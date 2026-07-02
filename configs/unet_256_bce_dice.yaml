@@ -1,0 +1,9 @@
+experiment:
+  name: unet_256_bce_dice
+  model: unet
+  loss: bce_dice
+  input_size: 256
+  threshold: 0.5
+  batch_size: 16
+  epochs: 30
+  profile: colab_t4

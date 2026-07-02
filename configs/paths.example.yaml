@@ -1,0 +1,22 @@
+profiles:
+  local_main_laptop:
+    data_root: "D:/datasets/VisA"
+    output_root: "./results"
+
+  local_home_laptop:
+    data_root: "E:/datasets/VisA"
+    output_root: "./results"
+
+  local_desktop:
+    data_root: "F:/datasets/VisA"
+    output_root: "./results"
+
+  colab_t4:
+    data_zip: "/content/drive/MyDrive/datasets/VisA.zip"
+    data_root: "/content/data/VisA"
+    output_root: "/content/drive/MyDrive/visa_results"
+
+  colab_a100:
+    data_zip: "/content/drive/MyDrive/datasets/VisA.zip"
+    data_root: "/content/data/VisA"
+    output_root: "/content/drive/MyDrive/visa_results"
