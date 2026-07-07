@@ -11,6 +11,7 @@ This file is the handoff document for future Codex sessions across different loc
 - First EDA pass is complete using `2cls_highshot.csv`.
 - A reproducible train/val/test split has been generated at `data/splits/visa_2cls_highshot_train_val_test.csv`.
 - Practical vision engineering checklist has been added and should guide all final deliverables.
+- Image-property EDA and sample-grid generation are complete enough to define the first augmentation hypotheses.
 
 ## Last Completed
 
@@ -24,15 +25,17 @@ This file is the handoff document for future Codex sessions across different loc
 - Generated local-only GT overlay samples under `results/figures/gt_overlays/`.
 - Created train/val/test split from the official high-shot split.
 - Added `PRACTICAL_VISION_CHECKLIST.md` to preserve the project direction as a practical inspection-system-oriented CV project.
+- Added image-property EDA script and generated sampled image statistics.
+- Added sample-grid generation script and generated local-only category grids.
+- Created `AUGMENTATION_NOTES.md` with first augmentation rationale.
 
 ## Next Tasks
 
-1. Add image-property EDA to support augmentation decisions.
-2. Create augmentation rationale notes based on image EDA.
-3. Implement `src/datasets/visa_dataset.py` using `data/splits/visa_2cls_highshot_train_val_test.csv`.
-4. Implement baseline metrics and loss functions.
-5. Create the first Colab U-Net training notebook.
-6. Run a small U-Net 256 smoke test on T4.
+1. Review `AUGMENTATION_NOTES.md` and confirm the first augmentation baseline.
+2. Implement `src/datasets/visa_dataset.py` using `data/splits/visa_2cls_highshot_train_val_test.csv`.
+3. Implement baseline metrics and loss functions.
+4. Create the first Colab U-Net training notebook.
+5. Run U-Net 256 with `aug_none` and `aug_mild` on T4.
 
 ## Decisions
 
@@ -47,6 +50,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Keep GT overlay batches local-only and ignored by Git.
 - Treat augmentation choices as hypotheses derived from EDA and validate them through baseline experiments.
 - Always include data leakage risk, label quality, category-wise behavior, threshold policy, failure analysis, and deployment constraints in final project outputs.
+- First augmentation comparison should be `aug_none` versus `aug_mild` rather than jumping directly to category-specific augmentation.
 
 ## Open Questions
 

@@ -79,3 +79,18 @@ train: 576 anomaly, 4619 normal
 val:   144 anomaly, 1154 normal
 test:  480 anomaly, 3848 normal
 ```
+
+## EDA Result Files
+
+Current lightweight EDA outputs committed under `results/`:
+
+```text
+dataset_distribution.csv
+mask_area_by_image.csv
+mask_area_stats.csv
+image_properties.csv
+image_property_stats.csv
+image_property_label_diff.csv
+```
+
+`image_properties.csv` is currently generated from balanced sampling for faster local analysis. Local visual grids are generated under `results/figures/sample_grids/` and ignored by Git.
