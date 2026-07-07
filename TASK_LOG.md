@@ -12,6 +12,7 @@ This file is the handoff document for future Codex sessions across different loc
 - A reproducible train/val/test split has been generated at `data/splits/visa_2cls_highshot_train_val_test.csv`.
 - Practical vision engineering checklist has been added and should guide all final deliverables.
 - Image-property EDA and sample-grid generation are complete enough to define the first augmentation hypotheses.
+- First two Colab notebooks for U-Net 256 augmentation comparison have been created.
 
 ## Last Completed
 
@@ -28,14 +29,17 @@ This file is the handoff document for future Codex sessions across different loc
 - Added image-property EDA script and generated sampled image statistics.
 - Added sample-grid generation script and generated local-only category grids.
 - Created `AUGMENTATION_NOTES.md` with first augmentation rationale.
+- Implemented reusable baseline code for VisA Dataset, U-Net, BCE+Dice loss, metrics, and prediction visualization.
+- Created `notebooks/01_train_unet_256_aug_none_colab.ipynb`.
+- Created `notebooks/02_train_unet_256_aug_mild_colab.ipynb`.
 
 ## Next Tasks
 
-1. Review `AUGMENTATION_NOTES.md` and confirm the first augmentation baseline.
-2. Implement `src/datasets/visa_dataset.py` using `data/splits/visa_2cls_highshot_train_val_test.csv`.
-3. Implement baseline metrics and loss functions.
-4. Create the first Colab U-Net training notebook.
-5. Run U-Net 256 with `aug_none` and `aug_mild` on T4.
+1. Run `01_train_unet_256_aug_none_colab.ipynb` on Colab T4.
+2. Run `02_train_unet_256_aug_mild_colab.ipynb` on Colab T4.
+3. Share `final_metrics.csv`, category metrics, learning curves, and prediction grids from both runs.
+4. Compare `aug_none` versus `aug_mild` and select the first base augmentation policy.
+5. Plan category/group-specific augmentation search based on the comparison.
 
 ## Decisions
 
@@ -51,6 +55,12 @@ This file is the handoff document for future Codex sessions across different loc
 - Treat augmentation choices as hypotheses derived from EDA and validate them through baseline experiments.
 - Always include data leakage risk, label quality, category-wise behavior, threshold policy, failure analysis, and deployment constraints in final project outputs.
 - First augmentation comparison should be `aug_none` versus `aug_mild` rather than jumping directly to category-specific augmentation.
+- Colab result files should be saved under `/content/drive/MyDrive/visa_results/colab_runs/{experiment_name}` and shared back for analysis.
+
+## Known Local Limitations
+
+- `torch` is not installed in the current local Python environment, so Dataset/model runtime checks are expected to run in Colab.
+- Source files and notebooks have been syntax-checked locally, but GPU training must be verified in Colab.
 
 ## Open Questions
 
