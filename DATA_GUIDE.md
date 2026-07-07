@@ -63,3 +63,19 @@ data/splits/
 ```
 
 The same split files should be used in local evaluation and Colab training so experiments remain comparable.
+
+Current main split:
+
+```text
+data/splits/visa_2cls_highshot_train_val_test.csv
+```
+
+This split is derived from the official `split_csv/2cls_highshot.csv`. The official train split is stratified by object and label, then 20% is reserved as validation. The official test split is kept unchanged.
+
+Current totals:
+
+```text
+train: 576 anomaly, 4619 normal
+val:   144 anomaly, 1154 normal
+test:  480 anomaly, 3848 normal
+```

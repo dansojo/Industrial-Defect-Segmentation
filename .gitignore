@@ -33,6 +33,7 @@ data/processed/
 results/checkpoints/
 results/predictions/
 results/overlays/
+results/figures/gt_overlays/
 results/figures/full/
 
 # OS/editor
