@@ -13,6 +13,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Practical vision engineering checklist has been added and should guide all final deliverables.
 - Image-property EDA and sample-grid generation are complete enough to define the first augmentation hypotheses.
 - First two Colab notebooks for U-Net 256 augmentation comparison have been created.
+- Colab data path is set to `/content/drive/MyDrive/VisA_segmentation/VisA`.
 
 ## Last Completed
 
@@ -55,7 +56,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Treat augmentation choices as hypotheses derived from EDA and validate them through baseline experiments.
 - Always include data leakage risk, label quality, category-wise behavior, threshold policy, failure analysis, and deployment constraints in final project outputs.
 - First augmentation comparison should be `aug_none` versus `aug_mild` rather than jumping directly to category-specific augmentation.
-- Colab result files should be saved under `/content/drive/MyDrive/visa_results/colab_runs/{experiment_name}` and shared back for analysis.
+- Colab result files should be saved under `/content/drive/MyDrive/VisA_segmentation/visa_results/colab_runs/{experiment_name}` and shared back for analysis.
 
 ## Known Local Limitations
 

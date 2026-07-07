@@ -23,8 +23,16 @@ Run these two notebooks first on Colab T4:
 Both notebooks save outputs under:
 
 ```text
-/content/drive/MyDrive/visa_results/colab_runs/{experiment_name}
+/content/drive/MyDrive/VisA_segmentation/visa_results/colab_runs/{experiment_name}
 ```
+
+They expect the Drive dataset folder at:
+
+```text
+/content/drive/MyDrive/VisA_segmentation/VisA
+```
+
+If the folder is missing, they try `/content/drive/MyDrive/VisA_segmentation/VisA.zip`.
 
 Share these files back for comparison:
 

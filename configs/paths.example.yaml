@@ -12,11 +12,13 @@ profiles:
     output_root: "./results"
 
   colab_t4:
-    data_zip: "/content/drive/MyDrive/datasets/VisA.zip"
+    drive_data_dir: "/content/drive/MyDrive/VisA_segmentation/VisA"
+    data_zip: "/content/drive/MyDrive/VisA_segmentation/VisA.zip"
     data_root: "/content/data/VisA"
-    output_root: "/content/drive/MyDrive/visa_results"
+    output_root: "/content/drive/MyDrive/VisA_segmentation/visa_results"
 
   colab_a100:
-    data_zip: "/content/drive/MyDrive/datasets/VisA.zip"
+    drive_data_dir: "/content/drive/MyDrive/VisA_segmentation/VisA"
+    data_zip: "/content/drive/MyDrive/VisA_segmentation/VisA.zip"
     data_root: "/content/data/VisA"
-    output_root: "/content/drive/MyDrive/visa_results"
+    output_root: "/content/drive/MyDrive/VisA_segmentation/visa_results"

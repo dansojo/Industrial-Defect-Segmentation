@@ -38,7 +38,7 @@ Colab notebooks should follow this pattern:
 1. Mount Google Drive.
 2. Clone or pull this repository.
 3. Install requirements.
-4. Unzip VisA.zip to /content/data/VisA.
+4. Copy `/content/drive/MyDrive/VisA_segmentation/VisA` to `/content/data/VisA` or unzip `/content/drive/MyDrive/VisA_segmentation/VisA.zip`.
 5. Select experiment config.
 6. Train model.
 7. Save checkpoints and result CSVs to Google Drive.
