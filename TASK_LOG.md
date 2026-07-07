@@ -13,7 +13,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Practical vision engineering checklist has been added and should guide all final deliverables.
 - Image-property EDA and sample-grid generation are complete enough to define the first augmentation hypotheses.
 - First two Colab notebooks for U-Net 256 augmentation comparison have been created.
-- Colab data path is set to `/content/drive/MyDrive/VisA_segmentation/VisA`.
+- Colab data zip is set to `/content/drive/MyDrive/VisA_segmentation/VisA.zip`; notebooks extract it into `/content/data` and train from the local runtime disk.
 
 ## Last Completed
 

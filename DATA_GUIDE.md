@@ -23,7 +23,6 @@ Recommended profiles:
 Recommended Google Drive layout:
 
 ```text
-/content/drive/MyDrive/VisA_segmentation/VisA
 /content/drive/MyDrive/VisA_segmentation/VisA.zip
 /content/drive/MyDrive/VisA_segmentation/visa_results/
 ```
@@ -36,7 +35,7 @@ Recommended Colab runtime layout:
 /content/drive/MyDrive/VisA_segmentation/visa_results
 ```
 
-For training, copy the Drive dataset folder into `/content/data/VisA` or unzip `VisA.zip` into `/content/data`. Avoid reading image files directly from Google Drive during training because it can be slow.
+For training, unzip `VisA.zip` into `/content/data` and use `/content/data/VisA` as `DATA_ROOT`. Avoid reading image files directly from Google Drive during training because it can be slow.
 
 ## Repository Data Policy
 
