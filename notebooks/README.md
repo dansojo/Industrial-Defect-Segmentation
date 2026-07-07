@@ -20,6 +20,33 @@ Run these two notebooks first on Colab T4:
 02_train_unet_256_aug_mild_colab.ipynb
 ```
 
+Optional ablation notebooks:
+
+```text
+03_train_unet_256_aug_bc_colab.ipynb
+04_train_unet_256_aug_geo_colab.ipynb
+```
+
+Augmentation definitions:
+
+```text
+aug_none:
+  resize only
+
+aug_bc:
+  resize
+  RandomBrightnessContrast brightness_limit=0.12, contrast_limit=0.12, p=0.5
+
+aug_geo:
+  resize
+  ShiftScaleRotate shift_limit=0.03, scale_limit=0.08, rotate_limit=10, p=0.5
+
+aug_mild:
+  resize
+  aug_bc
+  aug_geo
+```
+
 Both notebooks save outputs under:
 
 ```text

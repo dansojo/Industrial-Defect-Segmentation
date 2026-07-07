@@ -14,6 +14,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Image-property EDA and sample-grid generation are complete enough to define the first augmentation hypotheses.
 - First two Colab notebooks for U-Net 256 augmentation comparison have been created.
 - Colab data zip is set to `/content/drive/MyDrive/VisA_segmentation/VisA.zip`; notebooks extract it into `/content/data` and train from the local runtime disk.
+- Optional `aug_bc` and `aug_geo` ablation notebooks have been added.
 
 ## Last Completed
 
@@ -33,14 +34,16 @@ This file is the handoff document for future Codex sessions across different loc
 - Implemented reusable baseline code for VisA Dataset, U-Net, BCE+Dice loss, metrics, and prediction visualization.
 - Created `notebooks/01_train_unet_256_aug_none_colab.ipynb`.
 - Created `notebooks/02_train_unet_256_aug_mild_colab.ipynb`.
+- Created optional ablation notebooks for brightness/contrast-only and geometry-only augmentation.
 
 ## Next Tasks
 
 1. Run `01_train_unet_256_aug_none_colab.ipynb` on Colab T4.
 2. Run `02_train_unet_256_aug_mild_colab.ipynb` on Colab T4.
-3. Share `final_metrics.csv`, category metrics, learning curves, and prediction grids from both runs.
-4. Compare `aug_none` versus `aug_mild` and select the first base augmentation policy.
-5. Plan category/group-specific augmentation search based on the comparison.
+3. If needed, run `03_train_unet_256_aug_bc_colab.ipynb` and `04_train_unet_256_aug_geo_colab.ipynb`.
+4. Share `final_metrics.csv`, category metrics, learning curves, and prediction grids from completed runs.
+5. Compare augmentation variants and select the first base augmentation policy.
+6. Plan category/group-specific augmentation search based on the comparison.
 
 ## Decisions
 

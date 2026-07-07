@@ -56,7 +56,7 @@ Use carefully or defer:
 
 ## First Experiment Recommendation
 
-Use two augmentation configs rather than overfitting the plan before training:
+Start with two augmentation configs rather than overfitting the plan before training:
 
 ```text
 aug_none:
@@ -69,6 +69,33 @@ aug_mild:
 ```
 
 Compare `aug_none` and `aug_mild` on U-Net 256 first. Add stronger or category-specific augmentation only after failure-case review.
+
+Optional ablations are prepared in case the combined result needs explanation:
+
+```text
+aug_bc:
+  resize
+  mild brightness/contrast only
+
+aug_geo:
+  resize
+  mild shift/scale/rotation only
+```
+
+## Current Augmentation Parameters
+
+| Transform | Parameter | Value | Interpretation |
+| --- | --- | ---: | --- |
+| Resize | `height`, `width` | 256, 256 | Baseline input size; simple but may distort aspect ratio |
+| RandomBrightnessContrast | `brightness_limit` | 0.12 | Conservative to mild photometric change |
+| RandomBrightnessContrast | `contrast_limit` | 0.12 | Conservative to mild contrast change |
+| RandomBrightnessContrast | `p` | 0.5 | Common probability; applied to about half of training samples |
+| ShiftScaleRotate | `shift_limit` | 0.03 | Conservative translation, up to about 3% of image size |
+| ShiftScaleRotate | `scale_limit` | 0.08 | Mild scale change, roughly +/-8% |
+| ShiftScaleRotate | `rotate_limit` | 10 | Conservative rotation for inspection images |
+| ShiftScaleRotate | `p` | 0.5 | Common probability; applied to about half of training samples |
+
+Overall, these settings are intentionally conservative for defect segmentation. They are weaker than many generic image-classification augmentation recipes because small defects can be erased or displaced by aggressive crop, blur, scale, or rotation.
 
 ## Product-Wise Notes
 
