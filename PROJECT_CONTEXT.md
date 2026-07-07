@@ -64,3 +64,5 @@ Real local paths should be stored in ignored local config files, not hard-coded 
 - Large raw data and checkpoints are excluded from Git.
 - T4 is for lightweight experiments and pipeline validation.
 - A100 is for heavier candidate training and final runs.
+- Final deliverables must include practical vision engineering considerations, not only model accuracy.
+- Use `PRACTICAL_VISION_CHECKLIST.md` as a required reference for README, portfolio, demo, and experiment report.
