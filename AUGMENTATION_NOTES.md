@@ -82,6 +82,29 @@ aug_geo:
   mild shift/scale/rotation only
 ```
 
+## Augmentation Experiment Epoch Policy
+
+Use a staged epoch policy so exploration stays efficient while final checks remain comparable.
+
+```text
+Stage 1: Base augmentation comparison
+- aug_none vs aug_mild
+- epoch: 15
+- purpose: choose the first base augmentation direction
+
+Stage 2: Category/group-specific candidate search
+- based on the selected base augmentation
+- epoch: 10
+- purpose: quickly remove weak product-wise or group-wise augmentation candidates
+
+Stage 3: Category/group-specific final check
+- top candidate policies from Stage 2
+- epoch: 15
+- purpose: confirm selected product/group augmentation policy under the same epoch budget as Stage 1
+```
+
+After this process, the selected policy should be treated as `selected_aug_v1`. It can be fixed for the next model/loss/input-size experiments, but should still be revisited if the model family, input size, or deployment constraints change substantially.
+
 ## Current Augmentation Parameters
 
 | Transform | Parameter | Value | Interpretation |

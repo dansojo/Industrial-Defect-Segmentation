@@ -25,11 +25,23 @@
 
 ## Priority 3: Practical Improvement
 
+- EDA-driven augmentation policy selection.
+- Product/group-specific augmentation candidate search.
 - Global threshold versus validation-best threshold.
 - Category-specific threshold.
 - Small object removal.
 - Morphological opening/closing.
 - Connected component analysis for defect count, area, and bounding boxes.
+
+## Augmentation Experiment Stages
+
+| Stage | Purpose | Epochs | Notes |
+| --- | --- | ---: | --- |
+| Stage 1 | Compare `aug_none` vs `aug_mild` | 15 | First base augmentation decision |
+| Stage 2 | Product/group-specific candidate search | 10 | Efficient screening based on selected base augmentation |
+| Stage 3 | Product/group-specific final check | 15 | Confirm top candidate policies before defining `selected_aug_v1` |
+
+The final selected augmentation policy from Stage 3 should be used as the fixed augmentation baseline for later model, loss, input-size, threshold, and post-processing experiments unless later results justify revisiting it.
 
 ## Required Result Tables
 

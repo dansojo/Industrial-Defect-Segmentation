@@ -15,6 +15,7 @@ This file is the handoff document for future Codex sessions across different loc
 - First two Colab notebooks for U-Net 256 augmentation comparison have been created.
 - Colab data archive is set to `/content/drive/MyDrive/VisA_segmentation/VisA.tar` first, with `VisA.zip` fallback; notebooks extract it into `/content/data` and train from the local runtime disk.
 - Optional `aug_bc` and `aug_geo` ablation notebooks have been added.
+- Augmentation experiment epoch policy is defined: Stage 1 base comparison uses 15 epochs, Stage 2 product/group candidate search uses 10 epochs, Stage 3 final candidate check uses 15 epochs.
 
 ## Last Completed
 
@@ -60,6 +61,9 @@ This file is the handoff document for future Codex sessions across different loc
 - Always include data leakage risk, label quality, category-wise behavior, threshold policy, failure analysis, and deployment constraints in final project outputs.
 - First augmentation comparison should be `aug_none` versus `aug_mild` rather than jumping directly to category-specific augmentation.
 - Colab result files should be saved under `/content/drive/MyDrive/VisA_segmentation/visa_results/colab_runs/{experiment_name}` and shared back for analysis.
+- Product/group-specific augmentation candidate search should use 10 epochs for screening.
+- Product/group-specific final augmentation checks should use 15 epochs before defining `selected_aug_v1`.
+- `selected_aug_v1` is considered the fixed augmentation policy for later experiments, but can be revisited if model family, input size, or deployment constraints change.
 
 ## Known Local Limitations
 
