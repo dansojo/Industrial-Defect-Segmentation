@@ -89,8 +89,13 @@ Use a staged epoch policy so exploration stays efficient while final checks rema
 ```text
 Stage 1: Base augmentation comparison
 - aug_none vs aug_mild
-- epoch: 15
+- epoch: 10 for the current lightweight baseline rerun
 - purpose: choose the first base augmentation direction
+
+Stage 1-B: Base augmentation confirmation if needed
+- top base augmentation candidates
+- epoch: 15
+- purpose: rerun only if 10-epoch comparison is inconclusive or needs stronger evidence
 
 Stage 2: Category/group-specific candidate search
 - based on the selected base augmentation
@@ -100,10 +105,17 @@ Stage 2: Category/group-specific candidate search
 Stage 3: Category/group-specific final check
 - top candidate policies from Stage 2
 - epoch: 15
-- purpose: confirm selected product/group augmentation policy under the same epoch budget as Stage 1
+- purpose: confirm selected product/group augmentation policy before defining `selected_aug_v1`
 ```
 
 After this process, the selected policy should be treated as `selected_aug_v1`. It can be fixed for the next model/loss/input-size experiments, but should still be revisited if the model family, input size, or deployment constraints change substantially.
+
+Current Colab notebooks keep the baseline lightweight:
+
+- `EPOCHS = 10`
+- `NUM_WORKERS = 0`
+- no sampler, loss, threshold, or input-size changes yet
+- diagnostic metrics are logged to understand zero Dice cases without changing the baseline
 
 ## Current Augmentation Parameters
 

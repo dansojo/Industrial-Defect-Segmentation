@@ -37,7 +37,8 @@
 
 | Stage | Purpose | Epochs | Notes |
 | --- | --- | ---: | --- |
-| Stage 1 | Compare `aug_none` vs `aug_mild` | 15 | First base augmentation decision |
+| Stage 1 | Lightweight compare `aug_none` vs `aug_mild` | 10 | Current baseline rerun and first base augmentation signal |
+| Stage 1-B | Confirm top base augmentation candidates if needed | 15 | Use only if 10-epoch comparison is inconclusive |
 | Stage 2 | Product/group-specific candidate search | 10 | Efficient screening based on selected base augmentation |
 | Stage 3 | Product/group-specific final check | 15 | Confirm top candidate policies before defining `selected_aug_v1` |
 

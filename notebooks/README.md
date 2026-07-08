@@ -47,6 +47,17 @@ aug_mild:
   aug_geo
 ```
 
+Current lightweight baseline settings:
+
+```text
+EPOCHS = 10
+NUM_WORKERS = 0
+LOSS_NAME = bce_dice
+THRESHOLD = 0.5
+```
+
+The notebooks also log diagnostic fields such as `pred_prob_mean`, `pred_prob_max`, `pred_positive_ratio`, and `target_positive_ratio`. These are for interpreting zero Dice cases and do not change the baseline training setup.
+
 Both notebooks save outputs under:
 
 ```text
