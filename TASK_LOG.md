@@ -13,7 +13,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Practical vision engineering checklist has been added and should guide all final deliverables.
 - Image-property EDA and sample-grid generation are complete enough to define the first augmentation hypotheses.
 - First two Colab notebooks for U-Net 256 augmentation comparison have been created.
-- Colab data zip is set to `/content/drive/MyDrive/VisA_segmentation/VisA.zip`; notebooks extract it into `/content/data` and train from the local runtime disk.
+- Colab data archive is set to `/content/drive/MyDrive/VisA_segmentation/VisA.tar` first, with `VisA.zip` fallback; notebooks extract it into `/content/data` and train from the local runtime disk.
 - Optional `aug_bc` and `aug_geo` ablation notebooks have been added.
 
 ## Last Completed
@@ -69,5 +69,5 @@ This file is the handoff document for future Codex sessions across different loc
 ## Open Questions
 
 - Final choice between Streamlit and Gradio for the demo app.
-- Exact Google Drive path for `VisA.zip`.
+- Confirmed Google Drive archive path is expected as `/content/drive/MyDrive/VisA_segmentation/VisA.tar` or `/content/drive/MyDrive/VisA_segmentation/VisA.zip`.
 - Whether to commit a small curated subset of overlay figures later for README/portfolio.

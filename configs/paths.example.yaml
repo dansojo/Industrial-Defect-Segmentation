@@ -12,11 +12,11 @@ profiles:
     output_root: "./results"
 
   colab_t4:
-    data_zip: "/content/drive/MyDrive/VisA_segmentation/VisA.zip"
+    data_archive: "/content/drive/MyDrive/VisA_segmentation/VisA.tar"
     data_root: "/content/data/VisA"
     output_root: "/content/drive/MyDrive/VisA_segmentation/visa_results"
 
   colab_a100:
-    data_zip: "/content/drive/MyDrive/VisA_segmentation/VisA.zip"
+    data_archive: "/content/drive/MyDrive/VisA_segmentation/VisA.tar"
     data_root: "/content/data/VisA"
     output_root: "/content/drive/MyDrive/VisA_segmentation/visa_results"

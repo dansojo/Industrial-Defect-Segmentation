@@ -53,13 +53,14 @@ Both notebooks save outputs under:
 /content/drive/MyDrive/VisA_segmentation/visa_results/colab_runs/{experiment_name}
 ```
 
-They expect the Drive zip file at:
+They expect a Drive archive at one of these paths:
 
 ```text
+/content/drive/MyDrive/VisA_segmentation/VisA.tar
 /content/drive/MyDrive/VisA_segmentation/VisA.zip
 ```
 
-The zip is extracted into `/content/data`, and training uses the local runtime path `/content/data/VisA`.
+The archive is extracted into `/content/data`, and training uses the local runtime path `/content/data/VisA`.
 
 Share these files back for comparison:
 
