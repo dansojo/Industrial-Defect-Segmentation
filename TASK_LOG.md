@@ -17,6 +17,7 @@ This file is the handoff document for future Codex sessions across different loc
 - Optional `aug_bc` and `aug_geo` ablation notebooks have been added.
 - Augmentation experiment epoch policy is defined: current Stage 1 lightweight base comparison uses 10 epochs, optional Stage 1-B confirmation uses 15 epochs, Stage 2 product/group candidate search uses 10 epochs, Stage 3 final candidate check uses 15 epochs.
 - Current Colab notebooks were adjusted to `EPOCHS = 10` and `NUM_WORKERS = 0`, with diagnostic probability/mask-positive logs added.
+- Added `00_diagnostic_unet_256_threshold_sweep_colab.ipynb` for short 5-epoch zero-Dice diagnosis.
 
 ## Last Completed
 
@@ -46,6 +47,8 @@ This file is the handoff document for future Codex sessions across different loc
 4. Share `final_metrics.csv`, category metrics, learning curves, and prediction grids from completed runs.
 5. Compare augmentation variants and select the first base augmentation policy.
 6. Plan category/group-specific augmentation search based on the comparison.
+
+If Dice remains zero at threshold 0.5, run `00_diagnostic_unet_256_threshold_sweep_colab.ipynb` to check lower-threshold signal and probability heatmaps before changing sampler/loss/input-size settings.
 
 ## Decisions
 

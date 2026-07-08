@@ -117,6 +117,14 @@ Current Colab notebooks keep the baseline lightweight:
 - no sampler, loss, threshold, or input-size changes yet
 - diagnostic metrics are logged to understand zero Dice cases without changing the baseline
 
+For deeper zero-Dice diagnosis, use:
+
+```text
+notebooks/00_diagnostic_unet_256_threshold_sweep_colab.ipynb
+```
+
+This short run uses 5 epochs and reports threshold sweeps for `[0.05, 0.1, 0.2, 0.3, 0.4, 0.5]`. The sweep is diagnostic only and should not be treated as final threshold tuning.
+
 ## Current Augmentation Parameters
 
 | Transform | Parameter | Value | Interpretation |

@@ -13,6 +13,14 @@ Planned notebooks:
 
 ## First Augmentation Comparison
 
+If the baseline shows zero Dice at threshold 0.5, run the diagnostic notebook first:
+
+```text
+00_diagnostic_unet_256_threshold_sweep_colab.ipynb
+```
+
+This notebook uses `EPOCHS = 5` and saves probability statistics, threshold sweep diagnostics, and heatmap grids. It is for diagnosis only, not final threshold selection.
+
 Run these two notebooks first on Colab T4:
 
 ```text
